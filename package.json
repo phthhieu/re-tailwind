@@ -1,0 +1,35 @@
+{
+  "name": "re-tailwind",
+  "version": "0.0.1",
+  "description": "ReasonML utility classes generated from Tailwind config",
+  "main": "src/Tailwind.re",
+  "author": "Hieu Pham <phthhieu@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "bsb -clean -make-world -w",
+    "dev": "parcel ./examples/index.html"
+  },
+  "files": [
+    "src",
+    "bsconfig.json"
+  ],
+  "keywords": [
+    "reasonml",
+    "bucklescript",
+    "css",
+    "tailwind"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phthhieu/re-tailwind"
+  },
+  "devDependencies": {
+    "bs-platform": "^5.2.1",
+    "bsb-js": "^1.1.7",
+    "parcel-bundler": "^1.12.4",
+    "reason-react": "^0.7.0"
+  },
+  "dependencies": {
+    "tailwindcss": "^1.1.2"
+  }
+}

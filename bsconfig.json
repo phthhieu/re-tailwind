@@ -1,0 +1,28 @@
+{
+  "name": "re-tailwind",
+  "reason": {
+    "react-jsx": 3
+  },
+  "version": "0.0.1",
+  "sources": [
+    {
+      "dir": "examples",
+      "type": "dev"
+    },
+    {
+      "dir" : "src"
+    }
+  ],
+  "bs-dev-dependencies": [
+    "reason-react"
+  ],
+  "warnings": {
+    "error": "+5+8"
+  },
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "refmt": 3
+}
