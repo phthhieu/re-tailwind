@@ -32,5 +32,11 @@ module Example = {
 ## Credits
 - [Typed tailwind](https://github.com/dvkndn/typed-tailwind) which has the same purpose to this project but in TypeScript
 
+## Next works:
+- Convert polymorphic variant to normal variant and add more constraints in types. Eg: No duplicate class names, Non-sense class names wouldn't go together.
+- Complete the list of variant
+- Auto generate ReasonML code for Tailwind CSS
+- Auto generate ReasonML code for Tailwind CSS by user config
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit)
