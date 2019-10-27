@@ -31,7 +31,7 @@ module Example = {
 
 ```
 
-[More examples](../blob/examples)
+[More examples](../master/examples)
 
 ## Credits
 - [Typed tailwind](https://github.com/dvkndn/typed-tailwind) which has the same purpose to this project but in TypeScript
