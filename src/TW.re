@@ -1329,24 +1329,24 @@ let whitespaceToJs =
 
 type margin =
   | M1
-  | M1Minus
-  | M2Minus
-  | M3Minus
-  | M4Minus
-  | M5Minus
-  | M6Minus
-  | M8Minus
-  | M10Minus
-  | M12Minus
-  | M16Minus
-  | M20Minus
-  | M24Minus
-  | M32Minus
-  | M40Minus
-  | M48Minus
-  | M56Minus
-  | M64Minus
-  | MPxMinus
+  | MinusM1
+  | MinusM2
+  | MinusM3
+  | MinusM4
+  | MinusM5
+  | MinusM6
+  | MinusM8
+  | MinusM10
+  | MinusM12
+  | MinusM16
+  | MinusM20
+  | MinusM24
+  | MinusM32
+  | MinusM40
+  | MinusM48
+  | MinusM56
+  | MinusM64
+  | MinusMPx
   | My0
   | My1
   | My2
@@ -1367,24 +1367,24 @@ type margin =
   | My64
   | MyAuto
   | MyPx
-  | My1Minus
-  | My2Minus
-  | My3Minus
-  | My4Minus
-  | My5Minus
-  | My6Minus
-  | My8Minus
-  | My10Minus
-  | My12Minus
-  | My16Minus
-  | My20Minus
-  | My24Minus
-  | My32Minus
-  | My40Minus
-  | My48Minus
-  | My56Minus
-  | My64Minus
-  | MyPxMinus
+  | MinusMy1
+  | MinusMy2
+  | MinusMy3
+  | MinusMy4
+  | MinusMy5
+  | MinusMy6
+  | MinusMy8
+  | MinusMy10
+  | MinusMy12
+  | MinusMy16
+  | MinusMy20
+  | MinusMy24
+  | MinusMy32
+  | MinusMy40
+  | MinusMy48
+  | MinusMy56
+  | MinusMy64
+  | MinusMyPx
   | Mx0
   | Mx1
   | Mx2
@@ -1405,24 +1405,24 @@ type margin =
   | Mx64
   | MxAuto
   | MxPx
-  | Mx1Minus
-  | Mx2Minus
-  | Mx3Minus
-  | Mx4Minus
-  | Mx5Minus
-  | Mx6Minus
-  | Mx8Minus
-  | Mx10Minus
-  | Mx12Minus
-  | Mx16Minus
-  | Mx20Minus
-  | Mx24Minus
-  | Mx32Minus
-  | Mx40Minus
-  | Mx48Minus
-  | Mx56Minus
-  | Mx64Minus
-  | MxPxMinus
+  | MinusMx1
+  | MinusMx2
+  | MinusMx3
+  | MinusMx4
+  | MinusMx5
+  | MinusMx6
+  | MinusMx8
+  | MinusMx10
+  | MinusMx12
+  | MinusMx16
+  | MinusMx20
+  | MinusMx24
+  | MinusMx32
+  | MinusMx40
+  | MinusMx48
+  | MinusMx56
+  | MinusMx64
+  | MinusMxPx
   | Mt0
   | Mt1
   | Mt2
@@ -1443,24 +1443,24 @@ type margin =
   | Mt64
   | MtAuto
   | MtPx
-  | Mt1Minus
-  | Mt2Minus
-  | Mt3Minus
-  | Mt4Minus
-  | Mt5Minus
-  | Mt6Minus
-  | Mt8Minus
-  | Mt10Minus
-  | Mt12Minus
-  | Mt16Minus
-  | Mt20Minus
-  | Mt24Minus
-  | Mt32Minus
-  | Mt40Minus
-  | Mt48Minus
-  | Mt56Minus
-  | Mt64Minus
-  | MtPxMinus
+  | MinusMt1
+  | MinusMt2
+  | MinusMt3
+  | MinusMt4
+  | MinusMt5
+  | MinusMt6
+  | MinusMt8
+  | MinusMt10
+  | MinusMt12
+  | MinusMt16
+  | MinusMt20
+  | MinusMt24
+  | MinusMt32
+  | MinusMt40
+  | MinusMt48
+  | MinusMt56
+  | MinusMt64
+  | MinusMtPx
   | Mr0
   | Mr1
   | Mr2
@@ -1481,24 +1481,24 @@ type margin =
   | Mr64
   | MrAuto
   | MrPx
-  | Mr1Minus
-  | Mr2Minus
-  | Mr3Minus
-  | Mr4Minus
-  | Mr5Minus
-  | Mr6Minus
-  | Mr8Minus
-  | Mr10Minus
-  | Mr12Minus
-  | Mr16Minus
-  | Mr20Minus
-  | Mr24Minus
-  | Mr32Minus
-  | Mr40Minus
-  | Mr48Minus
-  | Mr56Minus
-  | Mr64Minus
-  | MrPxMinus
+  | MinusMr1
+  | MinusMr2
+  | MinusMr3
+  | MinusMr4
+  | MinusMr5
+  | MinusMr6
+  | MinusMr8
+  | MinusMr10
+  | MinusMr12
+  | MinusMr16
+  | MinusMr20
+  | MinusMr24
+  | MinusMr32
+  | MinusMr40
+  | MinusMr48
+  | MinusMr56
+  | MinusMr64
+  | MinusMrPx
   | Mb0
   | Mb1
   | Mb2
@@ -1519,24 +1519,24 @@ type margin =
   | Mb64
   | MbAuto
   | MbPx
-  | Mb1Minus
-  | Mb2Minus
-  | Mb3Minus
-  | Mb4Minus
-  | Mb5Minus
-  | Mb6Minus
-  | Mb8Minus
-  | Mb10Minus
-  | Mb12Minus
-  | Mb16Minus
-  | Mb20Minus
-  | Mb24Minus
-  | Mb32Minus
-  | Mb40Minus
-  | Mb48Minus
-  | Mb56Minus
-  | Mb64Minus
-  | MbPxMinus
+  | MinusMb1
+  | MinusMb2
+  | MinusMb3
+  | MinusMb4
+  | MinusMb5
+  | MinusMb6
+  | MinusMb8
+  | MinusMb10
+  | MinusMb12
+  | MinusMb16
+  | MinusMb20
+  | MinusMb24
+  | MinusMb32
+  | MinusMb40
+  | MinusMb48
+  | MinusMb56
+  | MinusMb64
+  | MinusMbPx
   | Ml0
   | Ml1
   | Ml2
@@ -1557,46 +1557,46 @@ type margin =
   | Ml64
   | MlAuto
   | MlPx
-  | Ml1Minus
-  | Ml2Minus
-  | Ml3Minus
-  | Ml4Minus
-  | Ml5Minus
-  | Ml6Minus
-  | Ml8Minus
-  | Ml10Minus
-  | Ml12Minus
-  | Ml16Minus
-  | Ml20Minus
-  | Ml24Minus
-  | Ml32Minus
-  | Ml40Minus
-  | Ml48Minus
-  | Ml56Minus
-  | Ml64Minus
-  | MlPxMinus;
+  | MinusMl1
+  | MinusMl2
+  | MinusMl3
+  | MinusMl4
+  | MinusMl5
+  | MinusMl6
+  | MinusMl8
+  | MinusMl10
+  | MinusMl12
+  | MinusMl16
+  | MinusMl20
+  | MinusMl24
+  | MinusMl32
+  | MinusMl40
+  | MinusMl48
+  | MinusMl56
+  | MinusMl64
+  | MinusMlPx;
 
 let marginToJs =
   fun
   | M1 => "m-1"
-  | M1Minus => "-m-1"
-  | M2Minus => "-m-2"
-  | M3Minus => "-m-3"
-  | M4Minus => "-m-4"
-  | M5Minus => "-m-5"
-  | M6Minus => "-m-6"
-  | M8Minus => "-m-8"
-  | M10Minus => "-m-10"
-  | M12Minus => "-m-12"
-  | M16Minus => "-m-16"
-  | M20Minus => "-m-20"
-  | M24Minus => "-m-24"
-  | M32Minus => "-m-32"
-  | M40Minus => "-m-40"
-  | M48Minus => "-m-48"
-  | M56Minus => "-m-56"
-  | M64Minus => "-m-64"
-  | MPxMinus => "-m-px"
+  | MinusM1 => "-m-1"
+  | MinusM2 => "-m-2"
+  | MinusM3 => "-m-3"
+  | MinusM4 => "-m-4"
+  | MinusM5 => "-m-5"
+  | MinusM6 => "-m-6"
+  | MinusM8 => "-m-8"
+  | MinusM10 => "-m-10"
+  | MinusM12 => "-m-12"
+  | MinusM16 => "-m-16"
+  | MinusM20 => "-m-20"
+  | MinusM24 => "-m-24"
+  | MinusM32 => "-m-32"
+  | MinusM40 => "-m-40"
+  | MinusM48 => "-m-48"
+  | MinusM56 => "-m-56"
+  | MinusM64 => "-m-64"
+  | MinusMPx => "-m-px"
   | My0 => "my-0"
   | My1 => "my-1"
   | My2 => "my-2"
@@ -1617,24 +1617,24 @@ let marginToJs =
   | My64 => "my-64"
   | MyAuto => "my-auto"
   | MyPx => "my-px"
-  | My1Minus => "-my-1"
-  | My2Minus => "-my-2"
-  | My3Minus => "-my-3"
-  | My4Minus => "-my-4"
-  | My5Minus => "-my-5"
-  | My6Minus => "-my-6"
-  | My8Minus => "-my-8"
-  | My10Minus => "-my-10"
-  | My12Minus => "-my-12"
-  | My16Minus => "-my-16"
-  | My20Minus => "-my-20"
-  | My24Minus => "-my-24"
-  | My32Minus => "-my-32"
-  | My40Minus => "-my-40"
-  | My48Minus => "-my-48"
-  | My56Minus => "-my-56"
-  | My64Minus => "-my-64"
-  | MyPxMinus => "-my-px"
+  | MinusMy1 => "-my-1"
+  | MinusMy2 => "-my-2"
+  | MinusMy3 => "-my-3"
+  | MinusMy4 => "-my-4"
+  | MinusMy5 => "-my-5"
+  | MinusMy6 => "-my-6"
+  | MinusMy8 => "-my-8"
+  | MinusMy10 => "-my-10"
+  | MinusMy12 => "-my-12"
+  | MinusMy16 => "-my-16"
+  | MinusMy20 => "-my-20"
+  | MinusMy24 => "-my-24"
+  | MinusMy32 => "-my-32"
+  | MinusMy40 => "-my-40"
+  | MinusMy48 => "-my-48"
+  | MinusMy56 => "-my-56"
+  | MinusMy64 => "-my-64"
+  | MinusMyPx => "-my-px"
   | Mx0 => "mx-0"
   | Mx1 => "mx-1"
   | Mx2 => "mx-2"
@@ -1655,24 +1655,24 @@ let marginToJs =
   | Mx64 => "mx-64"
   | MxAuto => "mx-auto"
   | MxPx => "mx-px"
-  | Mx1Minus => "-mx-1"
-  | Mx2Minus => "-mx-2"
-  | Mx3Minus => "-mx-3"
-  | Mx4Minus => "-mx-4"
-  | Mx5Minus => "-mx-5"
-  | Mx6Minus => "-mx-6"
-  | Mx8Minus => "-mx-8"
-  | Mx10Minus => "-mx-10"
-  | Mx12Minus => "-mx-12"
-  | Mx16Minus => "-mx-16"
-  | Mx20Minus => "-mx-20"
-  | Mx24Minus => "-mx-24"
-  | Mx32Minus => "-mx-32"
-  | Mx40Minus => "-mx-40"
-  | Mx48Minus => "-mx-48"
-  | Mx56Minus => "-mx-56"
-  | Mx64Minus => "-mx-64"
-  | MxPxMinus => "-mx-px"
+  | MinusMx1 => "-mx-1"
+  | MinusMx2 => "-mx-2"
+  | MinusMx3 => "-mx-3"
+  | MinusMx4 => "-mx-4"
+  | MinusMx5 => "-mx-5"
+  | MinusMx6 => "-mx-6"
+  | MinusMx8 => "-mx-8"
+  | MinusMx10 => "-mx-10"
+  | MinusMx12 => "-mx-12"
+  | MinusMx16 => "-mx-16"
+  | MinusMx20 => "-mx-20"
+  | MinusMx24 => "-mx-24"
+  | MinusMx32 => "-mx-32"
+  | MinusMx40 => "-mx-40"
+  | MinusMx48 => "-mx-48"
+  | MinusMx56 => "-mx-56"
+  | MinusMx64 => "-mx-64"
+  | MinusMxPx => "-mx-px"
   | Mt0 => "mt-0"
   | Mt1 => "mt-1"
   | Mt2 => "mt-2"
@@ -1693,24 +1693,24 @@ let marginToJs =
   | Mt64 => "mt-64"
   | MtAuto => "mt-auto"
   | MtPx => "mt-px"
-  | Mt1Minus => "-mt-1"
-  | Mt2Minus => "-mt-2"
-  | Mt3Minus => "-mt-3"
-  | Mt4Minus => "-mt-4"
-  | Mt5Minus => "-mt-5"
-  | Mt6Minus => "-mt-6"
-  | Mt8Minus => "-mt-8"
-  | Mt10Minus => "-mt-10"
-  | Mt12Minus => "-mt-12"
-  | Mt16Minus => "-mt-16"
-  | Mt20Minus => "-mt-20"
-  | Mt24Minus => "-mt-24"
-  | Mt32Minus => "-mt-32"
-  | Mt40Minus => "-mt-40"
-  | Mt48Minus => "-mt-48"
-  | Mt56Minus => "-mt-56"
-  | Mt64Minus => "-mt-64"
-  | MtPxMinus => "-mt-px"
+  | MinusMt1 => "-mt-1"
+  | MinusMt2 => "-mt-2"
+  | MinusMt3 => "-mt-3"
+  | MinusMt4 => "-mt-4"
+  | MinusMt5 => "-mt-5"
+  | MinusMt6 => "-mt-6"
+  | MinusMt8 => "-mt-8"
+  | MinusMt10 => "-mt-10"
+  | MinusMt12 => "-mt-12"
+  | MinusMt16 => "-mt-16"
+  | MinusMt20 => "-mt-20"
+  | MinusMt24 => "-mt-24"
+  | MinusMt32 => "-mt-32"
+  | MinusMt40 => "-mt-40"
+  | MinusMt48 => "-mt-48"
+  | MinusMt56 => "-mt-56"
+  | MinusMt64 => "-mt-64"
+  | MinusMtPx => "-mt-px"
   | Mr0 => "mr-0"
   | Mr1 => "mr-1"
   | Mr2 => "mr-2"
@@ -1731,24 +1731,24 @@ let marginToJs =
   | Mr64 => "mr-64"
   | MrAuto => "mr-auto"
   | MrPx => "mr-px"
-  | Mr1Minus => "-mr-1"
-  | Mr2Minus => "-mr-2"
-  | Mr3Minus => "-mr-3"
-  | Mr4Minus => "-mr-4"
-  | Mr5Minus => "-mr-5"
-  | Mr6Minus => "-mr-6"
-  | Mr8Minus => "-mr-8"
-  | Mr10Minus => "-mr-10"
-  | Mr12Minus => "-mr-12"
-  | Mr16Minus => "-mr-16"
-  | Mr20Minus => "-mr-20"
-  | Mr24Minus => "-mr-24"
-  | Mr32Minus => "-mr-32"
-  | Mr40Minus => "-mr-40"
-  | Mr48Minus => "-mr-48"
-  | Mr56Minus => "-mr-56"
-  | Mr64Minus => "-mr-64"
-  | MrPxMinus => "-mr-px"
+  | MinusMr1 => "-mr-1"
+  | MinusMr2 => "-mr-2"
+  | MinusMr3 => "-mr-3"
+  | MinusMr4 => "-mr-4"
+  | MinusMr5 => "-mr-5"
+  | MinusMr6 => "-mr-6"
+  | MinusMr8 => "-mr-8"
+  | MinusMr10 => "-mr-10"
+  | MinusMr12 => "-mr-12"
+  | MinusMr16 => "-mr-16"
+  | MinusMr20 => "-mr-20"
+  | MinusMr24 => "-mr-24"
+  | MinusMr32 => "-mr-32"
+  | MinusMr40 => "-mr-40"
+  | MinusMr48 => "-mr-48"
+  | MinusMr56 => "-mr-56"
+  | MinusMr64 => "-mr-64"
+  | MinusMrPx => "-mr-px"
   | Mb0 => "mb-0"
   | Mb1 => "mb-1"
   | Mb2 => "mb-2"
@@ -1769,24 +1769,24 @@ let marginToJs =
   | Mb64 => "mb-64"
   | MbAuto => "mb-auto"
   | MbPx => "mb-px"
-  | Mb1Minus => "-mb-1"
-  | Mb2Minus => "-mb-2"
-  | Mb3Minus => "-mb-3"
-  | Mb4Minus => "-mb-4"
-  | Mb5Minus => "-mb-5"
-  | Mb6Minus => "-mb-6"
-  | Mb8Minus => "-mb-8"
-  | Mb10Minus => "-mb-10"
-  | Mb12Minus => "-mb-12"
-  | Mb16Minus => "-mb-16"
-  | Mb20Minus => "-mb-20"
-  | Mb24Minus => "-mb-24"
-  | Mb32Minus => "-mb-32"
-  | Mb40Minus => "-mb-40"
-  | Mb48Minus => "-mb-48"
-  | Mb56Minus => "-mb-56"
-  | Mb64Minus => "-mb-64"
-  | MbPxMinus => "-mb-px"
+  | MinusMb1 => "-mb-1"
+  | MinusMb2 => "-mb-2"
+  | MinusMb3 => "-mb-3"
+  | MinusMb4 => "-mb-4"
+  | MinusMb5 => "-mb-5"
+  | MinusMb6 => "-mb-6"
+  | MinusMb8 => "-mb-8"
+  | MinusMb10 => "-mb-10"
+  | MinusMb12 => "-mb-12"
+  | MinusMb16 => "-mb-16"
+  | MinusMb20 => "-mb-20"
+  | MinusMb24 => "-mb-24"
+  | MinusMb32 => "-mb-32"
+  | MinusMb40 => "-mb-40"
+  | MinusMb48 => "-mb-48"
+  | MinusMb56 => "-mb-56"
+  | MinusMb64 => "-mb-64"
+  | MinusMbPx => "-mb-px"
   | Ml0 => "ml-0"
   | Ml1 => "ml-1"
   | Ml2 => "ml-2"
@@ -1807,24 +1807,24 @@ let marginToJs =
   | Ml64 => "ml-64"
   | MlAuto => "ml-auto"
   | MlPx => "ml-px"
-  | Ml1Minus => "-ml-1"
-  | Ml2Minus => "-ml-2"
-  | Ml3Minus => "-ml-3"
-  | Ml4Minus => "-ml-4"
-  | Ml5Minus => "-ml-5"
-  | Ml6Minus => "-ml-6"
-  | Ml8Minus => "-ml-8"
-  | Ml10Minus => "-ml-10"
-  | Ml12Minus => "-ml-12"
-  | Ml16Minus => "-ml-16"
-  | Ml20Minus => "-ml-20"
-  | Ml24Minus => "-ml-24"
-  | Ml32Minus => "-ml-32"
-  | Ml40Minus => "-ml-40"
-  | Ml48Minus => "-ml-48"
-  | Ml56Minus => "-ml-56"
-  | Ml64Minus => "-ml-64"
-  | MlPxMinus => "-ml-px";
+  | MinusMl1 => "-ml-1"
+  | MinusMl2 => "-ml-2"
+  | MinusMl3 => "-ml-3"
+  | MinusMl4 => "-ml-4"
+  | MinusMl5 => "-ml-5"
+  | MinusMl6 => "-ml-6"
+  | MinusMl8 => "-ml-8"
+  | MinusMl10 => "-ml-10"
+  | MinusMl12 => "-ml-12"
+  | MinusMl16 => "-ml-16"
+  | MinusMl20 => "-ml-20"
+  | MinusMl24 => "-ml-24"
+  | MinusMl32 => "-ml-32"
+  | MinusMl40 => "-ml-40"
+  | MinusMl48 => "-ml-48"
+  | MinusMl56 => "-ml-56"
+  | MinusMl64 => "-ml-64"
+  | MinusMlPx => "-ml-px";
 
 /* BoxShadow */
 

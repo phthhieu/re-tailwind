@@ -20,7 +20,7 @@ def get_variant(classname)
   case true
   when has_minus
     parts = classname.split('-')
-    parts.push('Minus')
+    parts.unshift('Minus')
   when starting_with_number
     parts = classname.split('-')
     num_part = parts.shift
