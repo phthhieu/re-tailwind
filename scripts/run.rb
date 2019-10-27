@@ -14,15 +14,15 @@ def get_utility_code(filename, utility_name, chunk_name)
 type #{chunk_name} =
 #{options.map{ |option| "  | #{option[0]}" }.join("\n")};
 
-let #{chunk_name}ToJs=
+let #{chunk_name}ToJs =
   fun
 #{options.map{ |option| "  | #{option[0]} => \"#{option[1]}\"" }.join("\n")};
   """
 end
 
-def run
+def run(inputDir, outputFile)
   regex = /\w*\.txt/
-  chunks = Dir["./data/*.txt"].map do |filename|
+  chunks = Dir[inputDir].map do |filename|
     utility_name = filename.match(regex)[0].gsub(".txt", "")
     chunk_name = utility_name.sub(utility_name[0], utility_name[0].downcase)
     code = get_utility_code(filename, utility_name, chunk_name)
@@ -49,7 +49,8 @@ let tToJs =
 let make =
   List.fold_left((result, style) => result ++ \" \" ++ tToJs(style), \"\");
   """
-  puts code
+
+  File.open(outputFile, "w") { |file| file.puts code }
 end
 
-run
+run("./data/*.txt", "../src/TW.re")
