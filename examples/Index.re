@@ -1,11 +1,13 @@
 [%bs.raw {|require("tailwindcss/dist/tailwind.min.css")|}];
 
-let str = ReasonReact.string;
-
-module App = {
+module Example = {
   [@react.component]
-  let make = () =>
-    <div className=Tailwind.make([`relative, `overflowHidden, `mbAuto])> {str("Hello Example")} </div>;
+  let make = () => {
+    <div className=TW.([Display(Flex)] |> make)>
+      <SimpleInput />
+      <Navigation />
+    </div>;
+  };
 };
 
-ReactDOMRe.renderToElementWithId(<App />, "root");
+ReactDOMRe.renderToElementWithId(<Example />, "root");

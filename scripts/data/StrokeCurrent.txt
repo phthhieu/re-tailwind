@@ -1,0 +1,1 @@
+.stroke-current	stroke: currentColor;

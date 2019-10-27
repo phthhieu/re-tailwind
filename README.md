@@ -17,25 +17,27 @@ Add re-tailwind to `bs-dependencies` in `bsconfig.json`
 [%bs.raw {|require("tailwindcss/dist/tailwind.min.css")|}];
 ```
 
-2. Use function Tailwind.make to construct your tailwind classnames:
+2. Use function TW.make to construct your tailwind classnames:
 
 ```
 module Example = {
   [@react.component]
-  let make = () =>
-    <div className=Tailwind.make([`relative, `overflowHidden, `mbAuto])>
+  let make = () => {
+    <div className=TW.([Display(Flex), Float(FloatRight)] |> make)>
       {ReasonReact.string("Hello Example")}
     </div>;
+  };
 };
+
 ```
+
+[More examples](../master/examples)
 
 ## Credits
 - [Typed tailwind](https://github.com/dvkndn/typed-tailwind) which has the same purpose to this project but in TypeScript
 
 ## Next works:
-- Convert polymorphic variant to normal variant and add more constraints in types. Eg: No duplicate class names, Non-sense class names wouldn't go together.
-- Complete the list of variant
-- Auto generate ReasonML code for Tailwind CSS
+- [WIP] Complete the list of variant. Examples: focus:shadow-outline, sm:inline
 - Auto generate ReasonML code for Tailwind CSS by user config
 
 ## License

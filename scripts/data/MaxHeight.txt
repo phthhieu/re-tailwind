@@ -1,0 +1,2 @@
+.max-h-full	max-height: 100%;
+.max-h-screen	max-height: 100vh;
