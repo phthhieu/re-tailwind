@@ -33,8 +33,8 @@ type float =
   | FloatRight
   | FloatLeft
   | FloatNone
-  | Clearfix;
 
+  | Clearfix;
 let floatToJs =
   fun
   | FloatRight => "float-right"
