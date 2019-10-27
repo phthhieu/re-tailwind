@@ -121,6 +121,12 @@ let borderStyleToJs =
   | BorderDouble => "border-double"
   | BorderNone => "border-none";
 
+/* FillCurrent */
+
+type fillCurrent = string;
+
+let fillCurrentToJs = () => "fill-current";
+
 /* Visibility */
 
 type visibility =
@@ -131,6 +137,12 @@ let visibilityToJs =
   fun
   | Visible => "visible"
   | Invisible => "invisible";
+
+/* OutlineNone */
+
+type outlineNone = string;
+
+let outlineNoneToJs = () => "outline-none";
 
 /* Padding */
 
@@ -404,6 +416,12 @@ let paddingToJs =
   | Pl56 => "pl-56"
   | Pl64 => "pl-64"
   | PlPx => "pl-px";
+
+/* StrokeCurrent */
+
+type strokeCurrent = string;
+
+let strokeCurrentToJs = () => "stroke-current";
 
 /* TextColor */
 
@@ -853,12 +871,6 @@ let flexWrapToJs =
   | FlexNoWrap => "flex-no-wrap"
   | FlexWrap => "flex-wrap"
   | FlexWrapReverse => "flex-wrap-reverse";
-
-/* Stroke */
-
-type stroke = string;
-
-let strokeToJs = () => "stroke-current";
 
 /* FlexShrink */
 
@@ -1885,11 +1897,11 @@ let maxWidthToJs =
   | MaxW6xl => "max-w-6xl"
   | MaxWFull => "max-w-full";
 
-/* Appearance */
+/* AppearanceNone */
 
-type appearance = string;
+type appearanceNone = string;
 
-let appearanceToJs = () => "appearance-none";
+let appearanceNoneToJs = () => "appearance-none";
 
 /* AlignItems */
 
@@ -1980,12 +1992,6 @@ let textAlignToJs =
   | TextCenter => "text-center"
   | TextRight => "text-right"
   | TextJustify => "text-justify";
-
-/* Fill */
-
-type fill = string;
-
-let fillToJs = () => "fill-current";
 
 /* WordBreak */
 
@@ -2242,12 +2248,6 @@ let displayToJs =
   | TableRow => "table-row"
   | TableCell => "table-cell"
   | Hidden => "hidden";
-
-/* Outline */
-
-type outline = string;
-
-let outlineToJs = () => "outline-none";
 
 /* LineHeight */
 
@@ -2599,8 +2599,11 @@ type t =
   | Flex(flex)
   | VerticalAlign(verticalAlign)
   | BorderStyle(borderStyle)
+  | FillCurrent
   | Visibility(visibility)
+  | OutlineNone
   | Padding(padding)
+  | StrokeCurrent
   | TextColor(textColor)
   | AlignContent(alignContent)
   | ListStyleType(listStyleType)
@@ -2617,7 +2620,6 @@ type t =
   | ObjectFit(objectFit)
   | Position(position)
   | FlexWrap(flexWrap)
-  | Stroke
   | FlexShrink(flexShrink)
   | Width(width)
   | FontSmoothing(fontSmoothing)
@@ -2633,14 +2635,13 @@ type t =
   | BoxShadow(boxShadow)
   | LetterSpacing(letterSpacing)
   | MaxWidth(maxWidth)
-  | Appearance
+  | AppearanceNone
   | AlignItems(alignItems)
   | Opacity(opacity)
   | MinHeight(minHeight)
   | UserSelect(userSelect)
   | BackgroundAttachment(backgroundAttachment)
   | TextAlign(textAlign)
-  | Fill
   | WordBreak(wordBreak)
   | ListStylePosition(listStylePosition)
   | BorderRadius(borderRadius)
@@ -2649,7 +2650,6 @@ type t =
   | FlexDirection(flexDirection)
   | Placement(placement)
   | Display(display)
-  | Outline
   | LineHeight(lineHeight)
   | PointerEvent(pointerEvent)
   | PlaceholderColor(placeholderColor)
@@ -2668,8 +2668,11 @@ let tToJs =
   | Flex(v) => flexToJs(v)
   | VerticalAlign(v) => verticalAlignToJs(v)
   | BorderStyle(v) => borderStyleToJs(v)
+  | FillCurrent => fillCurrentToJs()
   | Visibility(v) => visibilityToJs(v)
+  | OutlineNone => outlineNoneToJs()
   | Padding(v) => paddingToJs(v)
+  | StrokeCurrent => strokeCurrentToJs()
   | TextColor(v) => textColorToJs(v)
   | AlignContent(v) => alignContentToJs(v)
   | ListStyleType(v) => listStyleTypeToJs(v)
@@ -2686,7 +2689,6 @@ let tToJs =
   | ObjectFit(v) => objectFitToJs(v)
   | Position(v) => positionToJs(v)
   | FlexWrap(v) => flexWrapToJs(v)
-  | Stroke => strokeToJs()
   | FlexShrink(v) => flexShrinkToJs(v)
   | Width(v) => widthToJs(v)
   | FontSmoothing(v) => fontSmoothingToJs(v)
@@ -2702,14 +2704,13 @@ let tToJs =
   | BoxShadow(v) => boxShadowToJs(v)
   | LetterSpacing(v) => letterSpacingToJs(v)
   | MaxWidth(v) => maxWidthToJs(v)
-  | Appearance => appearanceToJs()
+  | AppearanceNone => appearanceNoneToJs()
   | AlignItems(v) => alignItemsToJs(v)
   | Opacity(v) => opacityToJs(v)
   | MinHeight(v) => minHeightToJs(v)
   | UserSelect(v) => userSelectToJs(v)
   | BackgroundAttachment(v) => backgroundAttachmentToJs(v)
   | TextAlign(v) => textAlignToJs(v)
-  | Fill => fillToJs()
   | WordBreak(v) => wordBreakToJs(v)
   | ListStylePosition(v) => listStylePositionToJs(v)
   | BorderRadius(v) => borderRadiusToJs(v)
@@ -2718,7 +2719,6 @@ let tToJs =
   | FlexDirection(v) => flexDirectionToJs(v)
   | Placement(v) => placementToJs(v)
   | Display(v) => displayToJs(v)
-  | Outline => outlineToJs()
   | LineHeight(v) => lineHeightToJs(v)
   | PointerEvent(v) => pointerEventToJs(v)
   | PlaceholderColor(v) => placeholderColorToJs(v)
