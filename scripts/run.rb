@@ -1,5 +1,6 @@
 def get_classname(str)
-  regex = /\.[\w'-]*/
+  str.gsub!(/\::\w+/, "") # Remove ::before / ::after   / ::placeholder
+  regex = /\.[\w'(-|\/)]*/
   match = str.match(regex)
   if match
     match[0].delete('.')
@@ -8,10 +9,31 @@ def get_classname(str)
   end
 end
 
+def get_variant(classname)
+  if classname.match(/\//)
+    classname.gsub!("/", "_")
+  end
+
+  has_minus = classname.start_with?('-')
+  starting_with_number = classname.match(/^\d*/)
+
+  case true
+  when has_minus
+    parts = classname.split('-')
+    parts.push('Minus')
+  when starting_with_number
+    parts = classname.split('-')
+    num_part = parts.shift
+    parts.push(num_part)
+  else
+    classname.split('-')
+  end.map(&:capitalize).join('')
+end
+
 def get_multi_variants_code(lines, utility_name, chunk_name)
   options = lines.map do |line|
     classname = get_classname(line)
-    variant = classname.split('-').map(&:capitalize).join('')
+    variant = get_variant(classname)
     [variant, classname]
   end.compact
   """

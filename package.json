@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "bsb -clean -make-world -w",
-    "dev": "parcel ./examples/index.html"
+    "dev": "parcel ./examples/index.html",
+    "format": "bsrefmt --in-place **/*.re"
   },
   "files": [
     "src",
