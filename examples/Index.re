@@ -3,10 +3,7 @@
 module Example = {
   [@react.component]
   let make = () => {
-    let twClassNames = {
-      TW.([Display(Flex), Float(FloatRight)] |> make);
-    };
-    <div className=twClassNames> {ReasonReact.string("Hello Example")} </div>;
+    <div className=TW.([Display(Flex)] |> make)> <SimpleInput /> </div>;
   };
 };
 
