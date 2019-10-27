@@ -1,0 +1,8 @@
+.border-transparent	border-color: transparent;
+.border-black	border-color: #000;
+.border-white	border-color: #fff;
+.border-gray-100	border-color: #f7fafc;
+.border-gray-200	border-color: #edf2f7;
+.border-gray-300	border-color: #e2e8f0;
+.border-gray-400	border-color: #cbd5e0;
+.border-gray-500	border-color: #a0aec0;

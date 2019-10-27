@@ -1,0 +1,2 @@
+.min-w-0	min-width: 0;
+.min-w-full	min-width: 100%;
