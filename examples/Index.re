@@ -3,7 +3,10 @@
 module Example = {
   [@react.component]
   let make = () => {
-    <div className=TW.([Display(Flex)] |> make)> <SimpleInput /> </div>;
+    <div className=TW.([Display(Flex)] |> make)>
+      <SimpleInput />
+      <Navigation />
+    </div>;
   };
 };
 
