@@ -1,0 +1,13 @@
+{{chunk_codes}}
+
+/* TW */
+
+type t =
+{{type_t}};
+
+let tToJs =
+  fun
+{{t_to_js}};
+
+let make =
+  List.fold_left((result, style) => result ++ " " ++ tToJs(style), "");
