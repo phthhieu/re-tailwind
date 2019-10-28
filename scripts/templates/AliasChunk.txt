@@ -1,0 +1,5 @@
+/* {{utility_name}} */
+
+type {{chunk_name}} = string;
+
+let {{chunk_name}}ToJs = () => "{{classname}}";
