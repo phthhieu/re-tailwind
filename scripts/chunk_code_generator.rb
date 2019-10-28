@@ -33,17 +33,17 @@ class ChunkCodeGenerator
     has_minus = classname.start_with?('-')
     starting_with_number = classname.match(/^\d*/)
 
+    parts = classname.split('-')
+
     case true
     when has_minus
-      parts = classname.split('-')
       parts.unshift('Minus')
     when starting_with_number
-      parts = classname.split('-')
       num_part = parts.shift
       parts.push(num_part)
-    else
-      classname.split('-')
-    end.map(&:capitalize).join('')
+    end
+
+    parts.map(&:capitalize).join('')
   end
 
   def extract_chunk_code
@@ -55,19 +55,21 @@ class ChunkCodeGenerator
   end
 
   def extract_multi_variants_code
-    options = @lines.map do |line|
+    chunk_variants = []
+    chunk_to_js = []
+
+    @lines.each do |line|
       classname = extract_classname(line)
       variant = extract_variant(classname)
-      [variant, classname]
-    end.compact
+      chunk_variants << "  | #{variant}"
+      chunk_to_js << "  | #{variant} => \"#{classname}\""
+    end
 
     TemplateReplacement.new('./templates/Chunk.txt').call(
       utility_name: @utility_name,
       chunk_name: @chunk_name,
-      chunk_variants: options.map { |option| "  | #{option[0]}" }.join("\n"),
-      chunk_to_js: options.map do |option|
-        "  | #{option[0]} => \"#{option[1]}\""
-      end.join("\n")
+      chunk_variants: chunk_variants.join("\n"),
+      chunk_to_js: chunk_to_js.join("\n")
     )
   end
 
@@ -80,10 +82,15 @@ class ChunkCodeGenerator
   end
 
   def extract_utility_name
-    @utility_name = @chunk_data_filename.match(/\w*\.txt/)[0].gsub('.txt', '')
+    matched_filename = @chunk_data_filename.match(/\w*\.txt/)[0]
+    @utility_name = matched_filename.gsub('.txt', '')
   end
 
   def extract_chunk_name
-    @chunk_name = utility_name.sub(utility_name[0], utility_name[0].downcase)
+    @chunk_name = capitalize_first_letter(utility_name)
+  end
+
+  def capitalize_first_letter(str)
+    str.sub(utility_name[0], str[0].downcase)
   end
 end
