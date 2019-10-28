@@ -1,3 +1,3 @@
-require_relative './generator.rb'
+require_relative './tw_generator.rb'
 
-Generator.new('./data/*.txt', '../src/TW.re').call
+TwGenerator.new('./data/*.txt', '../src/TW.re').call
