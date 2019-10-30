@@ -13,6 +13,7 @@ let make = () => {
       className=TW.(
         [
           BackgroundColor(BgWhite),
+          BackgroundColor(HoverBgGray100),
           BorderWidth(Border),
           BorderColor(BorderGray300),
           BorderRadius(RoundedLg),

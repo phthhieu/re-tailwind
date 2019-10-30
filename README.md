@@ -37,7 +37,7 @@ module Example = {
 - [Typed tailwind](https://github.com/dvkndn/typed-tailwind) which has the same purpose to this project but in TypeScript
 
 ## Next works:
-- [WIP] Complete the list of variant for pseudo-class. Ref https://tailwindcss.com/docs/pseudo-class-variants
+- Tailwind PPX
 - Auto generate ReasonML code for Tailwind CSS by user config
 
 ## License
