@@ -54,6 +54,42 @@ class ChunkCodeGenerator
                   end
   end
 
+  PSEUDO_CLASS = {
+    hover: %w[
+      BackgroundColor
+      BorderColor
+      BoxShadow
+      FontWeight
+      Opacity
+      TextColor
+      TextDecoration
+    ],
+    focus: %w[
+      BackgroundColor
+      BorderColor
+      BoxShadow
+      FontWeight
+      Opacity
+      Outline
+      TextColor
+      TextDecoration
+    ]
+  }.freeze
+
+  def create_options(classname, variant)
+    variant_matchings = ["| #{variant}"]
+    variant_to_classnames = ["| #{variant} => \"#{classname}\""]
+    PSEUDO_CLASS.each do |k, v|
+      if v.include?(@utility_name)
+        pseudo_variant = "#{k.to_s.capitalize}#{variant}"
+        pseudo_classname = "#{k}:#{classname}"
+        variant_matchings << "| #{pseudo_variant}"
+        variant_to_classnames << "| #{pseudo_variant} => \"#{pseudo_classname}\""
+      end
+    end
+    [variant_matchings, variant_to_classnames]
+  end
+
   def extract_multi_variants_code
     chunk_variants = []
     chunk_to_js = []
@@ -61,8 +97,9 @@ class ChunkCodeGenerator
     @lines.each do |line|
       classname = extract_classname(line)
       variant = extract_variant(classname)
-      chunk_variants << "  | #{variant}"
-      chunk_to_js << "  | #{variant} => \"#{classname}\""
+      new_options = create_options(classname, variant)
+      chunk_variants.concat(new_options[0])
+      chunk_to_js.concat(new_options[1])
     end
 
     TemplateReplacement.new('./templates/Chunk.txt').call(
