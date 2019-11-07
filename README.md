@@ -13,13 +13,13 @@ Add re-tailwind to `bs-dependencies` in `bsconfig.json`
 
 1. Ensure your app already import tailwind css
 
-```
+```reason
 [%bs.raw {|require("tailwindcss/dist/tailwind.min.css")|}];
 ```
 
 2. Use function TW.make to construct your tailwind classnames:
 
-```
+```reason
 module Example = {
   [@react.component]
   let make = () => {
