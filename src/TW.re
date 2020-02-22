@@ -3533,9 +3533,13 @@ type t =
   | Height(height)
   | MinWidth(minWidth)
   | FontSize(fontSize)
-  | AlignSelf(alignSelf);
+  | AlignSelf(alignSelf)
+  | Sm(t)
+  | Md(t)
+  | Lg(t)
+  | Xl(t);
 
-let tToJs =
+let rec tToJs =
   fun
   | ZIndex(v) => zIndexToJs(v)
   | BorderCollapse(v) => borderCollapseToJs(v)
@@ -3602,7 +3606,11 @@ let tToJs =
   | Height(v) => heightToJs(v)
   | MinWidth(v) => minWidthToJs(v)
   | FontSize(v) => fontSizeToJs(v)
-  | AlignSelf(v) => alignSelfToJs(v);
+  | AlignSelf(v) => alignSelfToJs(v)
+  | Sm(t) => "sm:" ++ tToJs(t)
+  | Md(t) => "md:" ++ tToJs(t)
+  | Lg(t) => "lg:" ++ tToJs(t)
+  | Xl(t) => "xl:" ++ tToJs(t);
 
 let make =
   List.fold_left((result, style) => result ++ " " ++ tToJs(style), "");
