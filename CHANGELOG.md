@@ -1,5 +1,8 @@
 # Change Log
 
+### 0.0.4
+- Support responsiveness. Eg: Sm(BackgroundColor(HoverBgGray100))
+
 ### 0.0.3
 - Add pseudo class: Eg: BackgroundColor(HoverBgGray100)
 

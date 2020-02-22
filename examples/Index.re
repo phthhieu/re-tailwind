@@ -6,6 +6,7 @@ module Example = {
     <div className=TW.([Display(Flex)] |> make)>
       <SimpleInput />
       <Navigation />
+      <ResponsiveBox />
     </div>;
   };
 };
