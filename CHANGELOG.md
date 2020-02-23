@@ -1,5 +1,8 @@
 # Change Log
 
+### 0.0.5
+- [#11](https://github.com/phthhieu/re-tailwind/pull/11) Fixed incorrect classes for width ([@tcoopman](https://github.com/tcoopman))
+
 ### 0.0.4
 - Support responsiveness. Eg: Sm(BackgroundColor(HoverBgGray100))
 
