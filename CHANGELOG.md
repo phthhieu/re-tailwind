@@ -1,5 +1,9 @@
 # Change Log
 
+### 0.0.6
+- [#12](https://github.com/phthhieu/re-tailwind/pull/12) Support Grid style ([@AodhanHayter](https://github.com/AodhanHayter))
+
+
 ### 0.0.5
 - [#11](https://github.com/phthhieu/re-tailwind/pull/11) Fixed incorrect classes for width ([@tcoopman](https://github.com/tcoopman))
 
