@@ -3108,6 +3108,7 @@ type display =
   | Inline
   | Flex
   | InlineFlex
+  | Grid
   | Table
   | TableRow
   | TableCell
@@ -3120,10 +3121,357 @@ let displayToJs =
   | Inline => "inline"
   | Flex => "flex"
   | InlineFlex => "inline-flex"
+  | Grid => "grid"
   | Table => "table"
   | TableRow => "table-row"
   | TableCell => "table-cell"
   | Hidden => "hidden";
+
+/* GridFlow */
+
+type gridFlow =
+  | GridFlowRow
+  | GridFlowCol
+  | GridFlowRowDense
+  | GridFlowColDense;
+
+let gridFlowToJs =
+  fun
+  | GridFlowRow => "grid-flow-row"
+  | GridFlowCol => "grid-flow-col"
+  | GridFlowRowDense => "grid-flow-row-dense"
+  | GridFlowColDense => "grid-flow-col-dense";
+
+/* GridRows */
+
+type gridRows =
+  | GridRows1
+  | GridRows2
+  | GridRows3
+  | GridRows4
+  | GridRows5
+  | GridRows6
+  | GridRowsNone;
+
+let gridRowsToJs =
+  fun
+  | GridRows1 => "grid-rows-1"
+  | GridRows2 => "grid-rows-2"
+  | GridRows3 => "grid-rows-3"
+  | GridRows4 => "grid-rows-4"
+  | GridRows5 => "grid-rows-5"
+  | GridRows6 => "grid-rows-6"
+  | GridRowsNone => "grid-rows-none";
+
+/* Gap */
+
+type gap =
+  | Gap0
+  | Gap1
+  | Gap2
+  | Gap3
+  | Gap4
+  | Gap5
+  | Gap6
+  | Gap8
+  | Gap10
+  | Gap12
+  | Gap16
+  | Gap20
+  | Gap24
+  | Gap32
+  | Gap40
+  | Gap48
+  | Gap56
+  | Gap64
+  | GapPx;
+
+let gapToJs =
+  fun
+  | Gap0 => "gap-0"
+  | Gap1 => "gap-1"
+  | Gap2 => "gap-2"
+  | Gap3 => "gap-3"
+  | Gap4 => "gap-4"
+  | Gap5 => "gap-5"
+  | Gap6 => "gap-6"
+  | Gap8 => "gap-8"
+  | Gap10 => "gap-10"
+  | Gap12 => "gap-12"
+  | Gap16 => "gap-16"
+  | Gap20 => "gap-20"
+  | Gap24 => "gap-24"
+  | Gap32 => "gap-32"
+  | Gap40 => "gap-40"
+  | Gap48 => "gap-48"
+  | Gap56 => "gap-56"
+  | Gap64 => "gap-64"
+  | GapPx => "gap-px";
+
+/* RowGap */
+
+type rowGap =
+  | RowGap0
+  | RowGap1
+  | RowGap2
+  | RowGap3
+  | RowGap4
+  | RowGap5
+  | RowGap6
+  | RowGap8
+  | RowGap10
+  | RowGap12
+  | RowGap16
+  | RowGap20
+  | RowGap24
+  | RowGap32
+  | RowGap40
+  | RowGap48
+  | RowGap56
+  | RowGap64
+  | RowGapPx;
+
+let rowGapToJs =
+  fun
+  | RowGap0 => "row-gap-0"
+  | RowGap1 => "row-gap-1"
+  | RowGap2 => "row-gap-2"
+  | RowGap3 => "row-gap-3"
+  | RowGap4 => "row-gap-4"
+  | RowGap5 => "row-gap-5"
+  | RowGap6 => "row-gap-6"
+  | RowGap8 => "row-gap-8"
+  | RowGap10 => "row-gap-10"
+  | RowGap12 => "row-gap-12"
+  | RowGap16 => "row-gap-16"
+  | RowGap20 => "row-gap-20"
+  | RowGap24 => "row-gap-24"
+  | RowGap32 => "row-gap-32"
+  | RowGap40 => "row-gap-40"
+  | RowGap48 => "row-gap-48"
+  | RowGap56 => "row-gap-56"
+  | RowGap64 => "row-gap-64"
+  | RowGapPx => "row-gap-px";
+
+/* ColGap */
+
+type colGap =
+  | ColGap0
+  | ColGap1
+  | ColGap2
+  | ColGap3
+  | ColGap4
+  | ColGap5
+  | ColGap6
+  | ColGap8
+  | ColGap10
+  | ColGap12
+  | ColGap16
+  | ColGap20
+  | ColGap24
+  | ColGap32
+  | ColGap40
+  | ColGap48
+  | ColGap56
+  | ColGap64
+  | ColGapPx;
+
+let colGapToJs =
+  fun
+  | ColGap0 => "col-gap-0"
+  | ColGap1 => "col-gap-1"
+  | ColGap2 => "col-gap-2"
+  | ColGap3 => "col-gap-3"
+  | ColGap4 => "col-gap-4"
+  | ColGap5 => "col-gap-5"
+  | ColGap6 => "col-gap-6"
+  | ColGap8 => "col-gap-8"
+  | ColGap10 => "col-gap-10"
+  | ColGap12 => "col-gap-12"
+  | ColGap16 => "col-gap-16"
+  | ColGap20 => "col-gap-20"
+  | ColGap24 => "col-gap-24"
+  | ColGap32 => "col-gap-32"
+  | ColGap40 => "col-gap-40"
+  | ColGap48 => "col-gap-48"
+  | ColGap56 => "col-gap-56"
+  | ColGap64 => "col-gap-64"
+  | ColGapPx => "col-gap-px";
+
+/* GridCols */
+
+type gridCols =
+  | GridCols1
+  | GridCols2
+  | GridCols3
+  | GridCols4
+  | GridCols5
+  | GridCols6
+  | GridCols7
+  | GridCols8
+  | GridCols9
+  | GridCols10
+  | GridCols11
+  | GridCols12
+  | GridColsNone;
+
+let gridColsToJs =
+  fun
+  | GridCols1 => "grid-cols-1"
+  | GridCols2 => "grid-cols-2"
+  | GridCols3 => "grid-cols-3"
+  | GridCols4 => "grid-cols-4"
+  | GridCols5 => "grid-cols-5"
+  | GridCols6 => "grid-cols-6"
+  | GridCols7 => "grid-cols-7"
+  | GridCols8 => "grid-cols-8"
+  | GridCols9 => "grid-cols-9"
+  | GridCols10 => "grid-cols-10"
+  | GridCols11 => "grid-cols-11"
+  | GridCols12 => "grid-cols-12"
+  | GridColsNone => "grid-cols-none";
+
+/* Row */
+
+type row =
+  | RowAuto
+  | RowSpan1
+  | RowSpan2
+  | RowSpan3
+  | RowSpan4
+  | RowSpan5
+  | RowSpan6
+  | RowStart1
+  | RowStart2
+  | RowStart3
+  | RowStart4
+  | RowStart5
+  | RowStart6
+  | RowStart7
+  | RowStartAuto
+  | RowEnd1
+  | RowEnd2
+  | RowEnd3
+  | RowEnd4
+  | RowEnd5
+  | RowEnd6
+  | RowEnd7
+  | RowEndAuto;
+
+let rowToJs =
+  fun
+  | RowAuto => "row-auto"
+  | RowSpan1 => "row-span-1"
+  | RowSpan2 => "row-span-2"
+  | RowSpan3 => "row-span-3"
+  | RowSpan4 => "row-span-4"
+  | RowSpan5 => "row-span-5"
+  | RowSpan6 => "row-span-6"
+  | RowStart1 => "row-start-1"
+  | RowStart2 => "row-start-2"
+  | RowStart3 => "row-start-3"
+  | RowStart4 => "row-start-4"
+  | RowStart5 => "row-start-5"
+  | RowStart6 => "row-start-6"
+  | RowStart7 => "row-start-7"
+  | RowStartAuto => "row-start-auto"
+  | RowEnd1 => "row-end-1"
+  | RowEnd2 => "row-end-2"
+  | RowEnd3 => "row-end-3"
+  | RowEnd4 => "row-end-4"
+  | RowEnd5 => "row-end-5"
+  | RowEnd6 => "row-end-6"
+  | RowEnd7 => "row-end-7"
+  | RowEndAuto => "row-end-auto";
+
+/* Col */
+
+type col =
+  | ColAuto
+  | ColSpan1
+  | ColSpan2
+  | ColSpan3
+  | ColSpan4
+  | ColSpan5
+  | ColSpan6
+  | ColSpan7
+  | ColSpan8
+  | ColSpan9
+  | ColSpan10
+  | ColSpan11
+  | ColSpan12
+  | ColStart1
+  | ColStart2
+  | ColStart3
+  | ColStart4
+  | ColStart5
+  | ColStart6
+  | ColStart7
+  | ColStart8
+  | ColStart9
+  | ColStart10
+  | ColStart11
+  | ColStart12
+  | ColStart13
+  | ColStartAuto
+  | ColEnd1
+  | ColEnd2
+  | ColEnd3
+  | ColEnd4
+  | ColEnd5
+  | ColEnd6
+  | ColEnd7
+  | ColEnd8
+  | ColEnd9
+  | ColEnd10
+  | ColEnd11
+  | ColEnd12
+  | ColEnd13
+  | ColEndAuto;
+
+let colToJs =
+  fun
+  | ColAuto => "col-auto"
+  | ColSpan1 => "col-span-1"
+  | ColSpan2 => "col-span-2"
+  | ColSpan3 => "col-span-3"
+  | ColSpan4 => "col-span-4"
+  | ColSpan5 => "col-span-5"
+  | ColSpan6 => "col-span-6"
+  | ColSpan7 => "col-span-7"
+  | ColSpan8 => "col-span-8"
+  | ColSpan9 => "col-span-9"
+  | ColSpan10 => "col-span-10"
+  | ColSpan11 => "col-span-11"
+  | ColSpan12 => "col-span-12"
+  | ColStart1 => "col-start-1"
+  | ColStart2 => "col-start-2"
+  | ColStart3 => "col-start-3"
+  | ColStart4 => "col-start-4"
+  | ColStart5 => "col-start-5"
+  | ColStart6 => "col-start-6"
+  | ColStart7 => "col-start-7"
+  | ColStart8 => "col-start-8"
+  | ColStart9 => "col-start-9"
+  | ColStart10 => "col-start-10"
+  | ColStart11 => "col-start-11"
+  | ColStart12 => "col-start-12"
+  | ColStart13 => "col-start-13"
+  | ColStartAuto => "col-start-auto"
+  | ColEnd1 => "col-end-1"
+  | ColEnd2 => "col-end-2"
+  | ColEnd3 => "col-end-3"
+  | ColEnd4 => "col-end-4"
+  | ColEnd5 => "col-end-5"
+  | ColEnd6 => "col-end-6"
+  | ColEnd7 => "col-end-7"
+  | ColEnd8 => "col-end-8"
+  | ColEnd9 => "col-end-9"
+  | ColEnd10 => "col-end-10"
+  | ColEnd11 => "col-end-11"
+  | ColEnd12 => "col-end-12"
+  | ColEnd13 => "col-end-13"
+  | ColEndAuto => "col-end-auto";
 
 /* LineHeight */
 
@@ -3526,6 +3874,14 @@ type t =
   | FlexDirection(flexDirection)
   | Placement(placement)
   | Display(display)
+  | GridFlow(gridFlow)
+  | GridRows(gridRows)
+  | Gap(gap)
+  | RowGap(rowGap)
+  | ColGap(colGap)
+  | GridCols(gridCols)
+  | Row(row)
+  | Col(col)
   | LineHeight(lineHeight)
   | PointerEvent(pointerEvent)
   | PlaceholderColor(placeholderColor)
@@ -3599,6 +3955,14 @@ let rec tToJs =
   | FlexDirection(v) => flexDirectionToJs(v)
   | Placement(v) => placementToJs(v)
   | Display(v) => displayToJs(v)
+  | GridFlow(v) => gridFlowToJs(v)
+  | GridRows(v) => gridRowsToJs(v)
+  | Gap(v) => gapToJs(v)
+  | RowGap(v) => rowGapToJs(v)
+  | ColGap(v) => colGapToJs(v)
+  | GridCols(v) => gridColsToJs(v)
+  | Row(v) => rowToJs(v)
+  | Col(v) => colToJs(v)
   | LineHeight(v) => lineHeightToJs(v)
   | PointerEvent(v) => pointerEventToJs(v)
   | PlaceholderColor(v) => placeholderColorToJs(v)
