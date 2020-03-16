@@ -1,5 +1,8 @@
 # Change Log
 
+### 0.0.7
+- Fix vulnerability
+
 ### 0.0.6
 - [#12](https://github.com/phthhieu/re-tailwind/pull/12) Support Grid style ([@AodhanHayter](https://github.com/AodhanHayter))
 
