@@ -1,5 +1,8 @@
 # Change Log
 
+### 0.0.8
+- Fix vulnerability
+
 ### 0.0.7
 - Fix vulnerability
 
