@@ -2152,7 +2152,26 @@ let whitespaceToJs =
 /* Margin */
 
 type margin =
+  | M0
   | M1
+  | M2
+  | M3
+  | M4
+  | M5
+  | M6
+  | M8
+  | M10
+  | M12
+  | M16
+  | M20
+  | M24
+  | M32
+  | M40
+  | M48
+  | M56
+  | M64
+  | MAuto
+  | MPx
   | MinusM1
   | MinusM2
   | MinusM3
@@ -2402,7 +2421,26 @@ type margin =
 
 let marginToJs =
   fun
+  | M0 => "m-0"
   | M1 => "m-1"
+  | M2 => "m-2"
+  | M3 => "m-3"
+  | M4 => "m-4"
+  | M5 => "m-5"
+  | M6 => "m-6"
+  | M8 => "m-8"
+  | M10 => "m-10"
+  | M12 => "m-12"
+  | M16 => "m-16"
+  | M20 => "m-20"
+  | M24 => "m-24"
+  | M32 => "m-32"
+  | M40 => "m-40"
+  | M48 => "m-48"
+  | M56 => "m-56"
+  | M64 => "m-64"
+  | MAuto => "m-auto"
+  | MPx => "m-px"
   | MinusM1 => "-m-1"
   | MinusM2 => "-m-2"
   | MinusM3 => "-m-3"
