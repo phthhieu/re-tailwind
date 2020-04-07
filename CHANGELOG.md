@@ -1,5 +1,8 @@
 # Change Log
 
+### 0.0.10
+- [#14](https://github.com/phthhieu/re-tailwind/pull/14) Add missing m-0, m-2-m-64, m-px and m-auto ([@Splingush](https://github.com/Splingush))
+
 ### 0.0.9, 0.0.8, 0.0.7
 - Fix vulnerability
 

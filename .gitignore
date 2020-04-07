@@ -2,6 +2,7 @@
 .merlin
 .bsb.lock
 .cache/
+.log
 
 **.bs.js
 
